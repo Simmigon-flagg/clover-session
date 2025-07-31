@@ -2,18 +2,10 @@
 
 import { useSession, signOut } from "next-auth/react";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
-
-import { useEffect } from "react";
 
 const Navbar = () => {
 
   const { data: session } = useSession();
-  const router = useRouter();
-  useEffect(() => {
-    console.log(session)
-    if (!session) router.replace("/login")
-  }, [session]);
 
   const logout = async () => {
     await signOut();

@@ -7,8 +7,8 @@ const LoginForm = () => {
     const router = useRouter();
 
     const [login, setLogin] = useState({
-        email: "simmigon@gmail.com",
-        password: "123",
+        email: "",
+        password: "",
     });
     const [error, setError] = useState("");
 

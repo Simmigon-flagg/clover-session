@@ -2,7 +2,7 @@ import React from 'react'
 import LoginForm from '../component/Login/login'
 
 const page = () => {
-    return (
+  return (
     <LoginForm />
   )
 }

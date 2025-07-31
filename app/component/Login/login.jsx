@@ -5,7 +5,7 @@ import { useRouter } from "next/navigation";
 
 const LoginForm = () => {
     const router = useRouter();
-    
+
     const [login, setLogin] = useState({
         email: "simmigon@gmail.com",
         password: "123",
@@ -24,6 +24,7 @@ const LoginForm = () => {
     const handleSubmit = async (event) => {
         event.preventDefault();
         const { email, password } = login;
+        console.log("login:::", login)
         try {
             const response = await signIn("credentials", {
                 email,
@@ -32,6 +33,7 @@ const LoginForm = () => {
             });
 
             if (response.error) {
+                console.log(response)
                 setError(response.error);
                 return;
             }
@@ -101,7 +103,7 @@ const LoginForm = () => {
                     </button>
                 </form>
 
-            
+
             </div>
         </div>
     );

@@ -20,13 +20,14 @@ const Navbar = () => {
           <ul className="flex gap-6">
             {session ? (
               <>
-
+              
                 <li><Link href="/protected">Protected</Link></li>
                 <li><button onClick={logout}>Sign out</button></li>
                 <li><Link href="/non-protected">Not Protected</Link></li>
               </>
             ) : (
               <>
+              <li><Link href="/signup">Signup</Link></li>
                 <li><Link href="/login">Login</Link></li>
                 <li><Link href="/non-protected">Not Protected</Link></li>
                 <li><Link href="/protected">Protected</Link></li>
